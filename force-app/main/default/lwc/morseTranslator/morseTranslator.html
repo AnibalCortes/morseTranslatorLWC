@@ -1,0 +1,17 @@
+<template>
+  <lightning-card
+    title="Traductor Español-Morse Morse-Español"
+    icon-name="action:new_note"
+    ><div class="slds-p-bottom_large slds-p-left_large" style="width: 500px">
+      <lightning-messages>Introduzca el texto a traducir:</lightning-messages>
+      <lightning-input
+        label="Texto a traducir"
+        value={texto}
+        onchange={handleChange}
+      >
+      </lightning-input>
+      <label>Valor traducido:</label>
+      <p>{traducido}</p>
+    </div></lightning-card
+  >
+</template>
