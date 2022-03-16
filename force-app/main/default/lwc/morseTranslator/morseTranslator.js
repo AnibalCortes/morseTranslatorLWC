@@ -1,4 +1,4 @@
-import { LightningElement, api } from "lwc";
+import { LightningElement } from "lwc";
 
 export default class MorseTranslator extends LightningElement {
   traducido = "";
@@ -54,11 +54,10 @@ export default class MorseTranslator extends LightningElement {
   }
 
   handleChange(event) {
+    var language;
     this.texto = event.detail.value;
     this.traducido = "";
-    var language = this.detectLanguage();
-    console.log(language);
-
+    language = this.detectLanguage();
     if (language === "Morse") {
       this.translateToSpanish();
     } else {
